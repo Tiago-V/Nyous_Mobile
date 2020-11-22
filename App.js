@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Button } from 'react-native';
 
 // Navigations
 import { createDrawerNavigator } from '@react-navigation/drawer';
@@ -21,10 +21,10 @@ const Logout = ( {navigation} ) => {
   return(
     <View>
       <Text>Deseja realmente sair da aplicação?</Text>
-      <Button onPres={() => {
+      <Button onPress={() => {
         AsyncStorage.removeItem('@jwt');
-        navigation.push("Login");
-      }} title="SAIR" />
+        navigation.push('Login');
+      }} title="SAIR" ></Button>
     </View>
   )
 }
